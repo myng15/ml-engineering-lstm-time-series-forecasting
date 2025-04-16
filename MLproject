@@ -1,0 +1,32 @@
+name: lstm-time-series-forecasting
+
+conda_env: environment.yaml
+
+entry_points:
+  main:
+    parameters:
+      experiment: {type: str, default: "LSTM-TimeSeries"}
+      dataset_path: {type: str, default: "data/time_series_19-covid-Confirmed_archived_0325.csv"}
+      test_size: {type: float, default: 0.2}
+      seq_length: {type: int, default: 5}
+      batch_size: {type: int, default: 8}
+      hidden_size: {type: int, default: 512}
+      n_layers: {type: int, default: 2}
+      dropout: {type: float, default: 0.5}
+      num_epochs: {type: int, default: 100}
+      learning_rate: {type: float, default: 0.0001}
+      device: {type: str, default: "cpu"}
+    # command: "python train.py {dataset_path} {test_size} {learning_rate}"
+    command: > 
+      python train.py
+      --experiment {experiment}
+      --dataset_path {dataset_path}
+      --test_size {test_size}
+      --seq_length {seq_length}
+      --batch_size {batch_size}
+      --hidden_size {hidden_size}
+      --n_layers {n_layers}
+      --dropout {dropout}
+      --num_epochs {num_epochs}
+      --learning_rate {learning_rate}
+      --device {device}
