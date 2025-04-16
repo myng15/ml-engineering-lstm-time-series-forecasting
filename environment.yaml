@@ -1,0 +1,23 @@
+name: ts-lstm-mlflow-sagemaker
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pytorch==2.4.0
+  - torchvision==0.19.0
+  - numpy=1.26.4
+  - scikit-learn #specific version installed is dependent on Numpy
+  - tqdm>=4.66.5
+  - awscli
+  - mlflow>=2.2
+  - fastapi==0.115.12
+  - pip
+
+  
+  - pip:
+    - sagemaker
+    - boto3
+    - s3fs
+  
