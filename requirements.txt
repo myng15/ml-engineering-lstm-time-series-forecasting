@@ -1,0 +1,15 @@
+torch==2.2.2
+torchvision==0.17.2
+numpy==1.26.4
+scikit-learn  # Version auto-matched to numpy
+pandas>=2.2.3
+matplotlib>=3.9.2
+tqdm>=4.66.5
+fastapi==0.115.12
+fastapi[standard]
+# awscli
+# mlflow>=2.2
+
+# sagemaker
+# boto3
+# s3fs
